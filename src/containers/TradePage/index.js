@@ -3,6 +3,10 @@ import React, { Component } from 'react';
 import Layout from '../Layout';
 import imgStar from '../../assets/images/star.svg';
 import imgEmpty from '../../assets/images/empty.png';
+import Transition from './Transition';
+import tradeJSON from './trade';
+import Buy_Sells from './Sells';
+
 class TradePage extends Component {
   render() {
     return (
@@ -31,118 +35,17 @@ class TradePage extends Component {
                           </tr>
                         </thead>
                         <tbody className="crypt-table-hover">
-                          <tr>
-                            <td className="align-middle"><img className="crypt-star pr-1" alt="star" src={imgStar} width="15" /> BTC/USD</td>
-                            <td className="crypt-down align-middle"><span className="pr-2" data-toggle="tooltip" data-placement="right" title="$ 0.05">0.00004356</span></td>
-                            <td>
-                              <span className="d-block">5.3424984</span>
-                              <b className="crypt-down">-5.4%</b>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td className="align-middle"><img className="crypt-star pr-1" alt="star" src={imgStar} width="15" /> LTC/USD</td>
-                            <td className="crypt-down align-middle"><span className="pr-2" data-toggle="tooltip" data-placement="right" title="$ 0.05">0.00005640</span></td>
-                            <td>
-                              <span className="d-block">6.6768876</span>
-                              <span>6.7%</span>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td className="align-middle"><img className="crypt-star pr-1" alt="star" src={imgStar} width="15" /> ETH/USD</td>
-                            <td className="crypt-down align-middle"><span className="pr-2" data-toggle="tooltip" data-placement="right" title="$ 0.05">0.00002340</span></td>
-                            <td>
-                              <span className="d-block">6.6768876</span>
-                              <b className="crypt-down">-7.7%</b>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td className="align-middle"><img className="crypt-star pr-1" alt="star" src={imgStar} width="15" /> DOGE/USD</td>
-                            <td className="crypt-up align-middle"><span className="pr-2" data-toggle="tooltip" data-placement="right" title="$ 0.05">0.00003644</span></td>
-                            <td>
-                              <span className="d-block">6.6768876</span>
-                              <b className="crypt-up">+3.7%</b>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td className="align-middle"><img className="crypt-star pr-1" alt="star" src={imgStar} width="15" /> XMR/USD</td>
-                            <td className="align-middle"><span className="pr-2" data-toggle="tooltip" data-placement="right" title="$ 0.05">0.00063440</span></td>
-                            <td>
-                              <span className="d-block">6.6768876</span>
-                              <span>3.7%</span>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td className="align-middle"><img className="crypt-star pr-1" alt="star" src={imgStar} width="15" /> ERC20/USD</td>
-                            <td className="align-middle"><span className="pr-2" data-toggle="tooltip" data-placement="right" title="$ 0.05">0.000344</span></td>
-                            <td>
-                              <span className="d-block">6.6768876</span>
-                              <span className="crypt-up"><b>+3.7%</b></span>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td className="align-middle"><img className="crypt-star pr-1" alt="star" src={imgStar} width="15" /> FTN/BTC</td>
-                            <td className="align-middle"><span className="pr-2" data-toggle="tooltip" data-placement="right" title="$ 0.05">0.000344</span></td>
-                            <td>
-                              <span className="d-block">6.6768876</span>
-                              <span className="crypt-up"><b>+3.7%</b></span>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td className="align-middle"><img className="crypt-star pr-1" alt="star" src={imgStar} width="15" /> RIF/BTC</td>
-                            <td className="align-middle"><span className="pr-2" data-toggle="tooltip" data-placement="right" title="$ 0.05">0.000344</span></td>
-                            <td>
-                              <span className="d-block">6.6768876</span>
-                              <span className="crypt-up"><b>+3.7%</b></span>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td className="align-middle"><img className="crypt-star pr-1" alt="star" src={imgStar} width="15" /> NEO/BTC</td>
-                            <td className="align-middle"><span className="pr-2" data-toggle="tooltip" data-placement="right" title="$ 0.05">0.56723</span></td>
-                            <td>
-                              <span className="d-block">9.34546</span>
-                              <span>6.7%</span>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td className="align-middle"><img className="crypt-star pr-1" alt="star" src={imgStar} width="15" /> TRX/BTC</td>
-                            <td className="align-middle"><span className="pr-2" data-toggle="tooltip" data-placement="right" title="$ 0.05">0.56723</span></td>
-                            <td>
-                              <span className="d-block">9.34546</span>
-                              <span>6.7%</span>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td className="align-middle"><img className="crypt-star pr-1" alt="star" src={imgStar} width="15" /> LSK/BTC</td>
-                            <td className="align-middle"><span className="pr-2" data-toggle="tooltip" data-placement="right" title="$ 0.05">0.56723</span></td>
-                            <td>
-                              <span className="d-block">9.34546</span>
-                              <span>6.7%</span>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td className="align-middle"><img className="crypt-star pr-1" alt="star" src={imgStar} width="15" /> XRP/BTC</td>
-                            <td className="align-middle"><span className="pr-2" data-toggle="tooltip" data-placement="right" title="$ 0.05">0.000344</span></td>
-                            <td>
-                              <span className="d-block">6.6768876</span>
-                              <span className="crypt-up"><b>+3.7%</b></span>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td className="align-middle"><img className="crypt-star pr-1" alt="star" src={imgStar} width="15" /> CNB/BTC</td>
-                            <td className="align-middle"><span className="pr-2" data-toggle="tooltip" data-placement="right" title="$ 0.05">0.56723</span></td>
-                            <td>
-                              <span className="d-block">9.34546</span>
-                              <span>6.7%</span>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td className="align-middle"><img className="crypt-star pr-1" alt="star" src={imgStar} width="15" /> VEN/BTC</td>
-                            <td className="align-middle"><span className="pr-2" data-toggle="tooltip" data-placement="right" title="$ 0.05">0.56723</span></td>
-                            <td>
-                              <span className="d-block">9.34546</span>
-                              <span>6.7%</span>
-                            </td>
-                          </tr>
+                        
+                          {tradeJSON.map(data=>(
+                            <tr>
+                              <td className="align-middle"><img className="crypt-star pr-1" alt="star" src={imgStar} width="15" />{data.Coin}</td>
+                              <td className={`${data.class2?data.class2:''} align-middle`}><span className="pr-2" data-toggle="tooltip" data-placement="right" title="$ 0.05">{data.Price}</span></td>
+                              <td>
+                                <span className="d-block">{data.Volume}</span>
+                                <b className={data.class2?data.class2:''}>{data.Volum2}</b>
+                              </td>
+                            </tr>
+                          ))}
                         </tbody>
                       </table>
                     </div>
@@ -156,126 +59,16 @@ class TradePage extends Component {
                           </tr>
                         </thead>
                         <tbody>
-                          <tr>
-                            <td className="align-middle"><img className="crypt-star pr-1" alt="star" src={imgStar} width="15" /> ETH/BTC</td>
-                            <td className="align-middle"><span className="pr-2" data-toggle="tooltip" data-placement="right" title="$ 0.05">0.0000234</span></td>
-                            <td>
-                              <span className="d-block">6.6768876</span>
-                              <b className="crypt-down">-7.7%</b>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td className="align-middle"><img className="crypt-star pr-1" alt="star" src={imgStar} width="15" /> EOS/BTC</td>
-                            <td className="crypt-down align-middle"><span className="pr-2" data-toggle="tooltip" data-placement="right" title="$ 0.05">0.000056</span></td>
-                            <td>
-                              <span className="d-block">5.3424984</span>
-                              <b className="crypt-down">-5.4%</b>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td className="align-middle"><img className="crypt-star pr-1" alt="star" src={imgStar} width="15" /> LTC/BTC</td>
-                            <td className="align-middle"><span className="pr-2" data-toggle="tooltip" data-placement="right" title="$ 0.05">0.0000564</span></td>
-                            <td>
-                              <span className="d-block">6.6768876</span>
-                              <span>6.7%</span>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td className="align-middle"><img className="crypt-star pr-1" alt="star" src={imgStar} width="15" /> DOGE/BTC</td>
-                            <td className="align-middle"><span className="pr-2" data-toggle="tooltip" data-placement="right" title="$ 0.05">0.000344</span></td>
-                            <td>
-                              <span className="d-block">6.6768876</span>
-                              <b className="crypt-up">+3.7%</b>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td className="align-middle"><img className="crypt-star pr-1" alt="star" src={imgStar} width="15" /> XMR/BTC</td>
-                            <td className="align-middle"><span className="pr-2" data-toggle="tooltip" data-placement="right" title="$ 0.05">0.000344</span></td>
-                            <td>
-                              <span className="d-block">6.6768876</span>
-                              <span>3.7%</span>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td className="align-middle"><img className="crypt-star pr-1" alt="star" src={imgStar} width="15" /> LINK/BTC</td>
-                            <td className="align-middle"><span className="pr-2" data-toggle="tooltip" data-placement="right" title="$ 0.05">0.000344</span></td>
-                            <td>
-                              <span className="d-block">6.6768876</span>
-                              <span className="crypt-up"><b>+3.7%</b></span>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td className="align-middle"><img className="crypt-star pr-1" alt="star" src={imgStar} width="15" /> FTN/BTC</td>
-                            <td className="align-middle"><span className="pr-2" data-toggle="tooltip" data-placement="right" title="$ 0.05">0.000344</span></td>
-                            <td>
-                              <span className="d-block">6.6768876</span>
-                              <span className="crypt-up"><b>+3.7%</b></span>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td className="align-middle"><img className="crypt-star pr-1" alt="star" src={imgStar} width="15" /> RIF/BTC</td>
-                            <td className="align-middle"><span className="pr-2" data-toggle="tooltip" data-placement="right" title="$ 0.05">0.000344</span></td>
-                            <td>
-                              <span className="d-block">6.6768876</span>
-                              <span className="crypt-up"><b>+3.7%</b></span>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td className="align-middle"><img className="crypt-star pr-1" alt="star" src={imgStar} width="15" /> NEO/BTC</td>
-                            <td className="align-middle"><span className="pr-2" data-toggle="tooltip" data-placement="right" title="$ 0.05">0.56723</span></td>
-                            <td>
-                              <span className="d-block">9.34546</span>
-                              <span>6.7%</span>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td className="align-middle"><img className="crypt-star pr-1" alt="star" src={imgStar} width="15" /> TRX/BTC</td>
-                            <td className="align-middle"><span className="pr-2" data-toggle="tooltip" data-placement="right" title="$ 0.05">0.56723</span></td>
-                            <td>
-                              <span className="d-block">9.34546</span>
-                              <span>6.7%</span>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td className="align-middle"><img className="crypt-star pr-1" alt="star" src={imgStar} width="15" /> LSK/BTC</td>
-                            <td className="align-middle"><span className="pr-2" data-toggle="tooltip" data-placement="right" title="$ 0.05">0.56723</span></td>
-                            <td>
-                              <span className="d-block">9.34546</span>
-                              <span>6.7%</span>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td className="align-middle"><img className="crypt-star pr-1" alt="star" src={imgStar} width="15" /> XRP/BTC</td>
-                            <td className="align-middle"><span className="pr-2" data-toggle="tooltip" data-placement="right" title="$ 0.05">0.000344</span></td>
-                            <td>
-                              <span className="d-block">6.6768876</span>
-                              <span className="crypt-up"><b>+3.7%</b></span>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td className="align-middle"><img className="crypt-star pr-1" alt="star" src={imgStar} width="15" /> CNB/BTC</td>
-                            <td className="align-middle"><span className="pr-2" data-toggle="tooltip" data-placement="right" title="$ 0.05">0.56723</span></td>
-                            <td>
-                              <span className="d-block">9.34546</span>
-                              <span>6.7%</span>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td className="align-middle"><img className="crypt-star pr-1" alt="star" src={imgStar} width="15" /> VEN/BTC</td>
-                            <td className="align-middle"><span className="pr-2" data-toggle="tooltip" data-placement="right" title="$ 0.05">0.56723</span></td>
-                            <td>
-                              <span className="d-block">9.34546</span>
-                              <span>6.7%</span>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td className="align-middle"><img className="crypt-star pr-1" alt="star" src={imgStar} width="15" /> DASH/BTC</td>
-                            <td className="align-middle"><span className="pr-2" data-toggle="tooltip" data-placement="right" title="$ 0.05">0.56723</span></td>
-                            <td>
-                              <span className="d-block">9.34546</span>
-                              <span>6.7%</span>
-                            </td>
-                          </tr>
+                          {tradeJSON.map(data=>(
+                            <tr>
+                              <td className="align-middle"><img className="crypt-star pr-1" alt="star" src={imgStar} width="15" />{data.Coin}</td>
+                              <td className={`${data.class2?data.class2:''} align-middle`}><span className="pr-2" data-toggle="tooltip" data-placement="right" title="$ 0.05">{data.Price}</span></td>
+                              <td>
+                                <span className="d-block">{data.Volume}</span>
+                                <b className={data.class2?data.class2:''}>{data.Volum2}</b>
+                              </td>
+                            </tr>
+                          ))}
                         </tbody>
                       </table>
                     </div>
@@ -289,126 +82,16 @@ class TradePage extends Component {
                           </tr>
                         </thead>
                         <tbody>
-                          <tr>
-                            <td className="align-middle"><img className="crypt-star pr-1" alt="star" src={imgStar} width="15" /> BTC/ETH</td>
-                            <td className="crypt-down align-middle"><span className="pr-2" data-toggle="tooltip" data-placement="right" title="$ 0.05">0.000056</span></td>
-                            <td>
-                              <span className="d-block">5.3424984</span>
-                              <b className="crypt-down">-5.4%</b>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td className="align-middle"><img className="crypt-star pr-1" alt="star" src={imgStar} width="15" /> LTC/BTC</td>
-                            <td className="align-middle"><span className="pr-2" data-toggle="tooltip" data-placement="right" title="$ 0.05">0.0000564</span></td>
-                            <td>
-                              <span className="d-block">6.6768876</span>
-                              <span>6.7%</span>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td className="align-middle"><img className="crypt-star pr-1" alt="star" src={imgStar} width="15" /> ETH/BTC</td>
-                            <td className="align-middle"><span className="pr-2" data-toggle="tooltip" data-placement="right" title="$ 0.05">0.0000234</span></td>
-                            <td>
-                              <span className="d-block">6.6768876</span>
-                              <b className="crypt-down">-7.7%</b>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td className="align-middle"><img className="crypt-star pr-1" alt="star" src={imgStar} width="15" /> DOGE/ETH</td>
-                            <td className="align-middle"><span className="pr-2" data-toggle="tooltip" data-placement="right" title="$ 0.05">0.000344</span></td>
-                            <td>
-                              <span className="d-block">6.6768876</span>
-                              <b className="crypt-up">+3.7%</b>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td className="align-middle"><img className="crypt-star pr-1" alt="star" src={imgStar} width="15" /> XMR/USTD</td>
-                            <td className="align-middle"><span className="pr-2" data-toggle="tooltip" data-placement="right" title="$ 0.05">0.000344</span></td>
-                            <td>
-                              <span className="d-block">6.6768876</span>
-                              <span>3.7%</span>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td className="align-middle"><img className="crypt-star pr-1" alt="star" src={imgStar} width="15" /> DOGE/USTD</td>
-                            <td className="align-middle"><span className="pr-2" data-toggle="tooltip" data-placement="right" title="$ 0.05">0.000344</span></td>
-                            <td>
-                              <span className="d-block">6.6768876</span>
-                              <span className="crypt-up"><b>+3.7%</b></span>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td className="align-middle"><img className="crypt-star pr-1" alt="star" src={imgStar} width="15" /> XMR/USTD</td>
-                            <td className="align-middle"><span className="pr-2" data-toggle="tooltip" data-placement="right" title="$ 0.05">0.000344</span></td>
-                            <td>
-                              <span className="d-block">6.6768876</span>
-                              <span className="crypt-up"><b>+3.7%</b></span>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td className="align-middle"><img className="crypt-star pr-1" alt="star" src={imgStar} width="15" /> DOGE/BTC</td>
-                            <td className="align-middle"><span className="pr-2" data-toggle="tooltip" data-placement="right" title="$ 0.05">0.000344</span></td>
-                            <td>
-                              <span className="d-block">6.6768876</span>
-                              <span className="crypt-up"><b>+3.7%</b></span>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td className="align-middle"><img className="crypt-star pr-1" alt="star" src={imgStar} width="15" /> XMR/USTD</td>
-                            <td className="align-middle"><span className="pr-2" data-toggle="tooltip" data-placement="right" title="$ 0.05">0.56723</span></td>
-                            <td>
-                              <span className="d-block">9.34546</span>
-                              <span>6.7%</span>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td className="align-middle"><img className="crypt-star pr-1" alt="star" src={imgStar} width="15" /> DOGE/BTC</td>
-                            <td className="align-middle"><span className="pr-2" data-toggle="tooltip" data-placement="right" title="$ 0.05">0.56723</span></td>
-                            <td>
-                              <span className="d-block">9.34546</span>
-                              <span>6.7%</span>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td className="align-middle"><img className="crypt-star pr-1" alt="star" src={imgStar} width="15" /> PQR/STU</td>
-                            <td className="align-middle"><span className="pr-2" data-toggle="tooltip" data-placement="right" title="$ 0.05">0.56723</span></td>
-                            <td>
-                              <span className="d-block">9.34546</span>
-                              <span>6.7%</span>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td className="align-middle"><img className="crypt-star pr-1" alt="star" src={imgStar} width="15" /> DOGE/BTC</td>
-                            <td className="align-middle"><span className="pr-2" data-toggle="tooltip" data-placement="right" title="$ 0.05">0.000344</span></td>
-                            <td>
-                              <span className="d-block">6.6768876</span>
-                              <span className="crypt-up"><b>+3.7%</b></span>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td className="align-middle"><img className="crypt-star pr-1" alt="star" src={imgStar} width="15" /> XMR/USTD</td>
-                            <td className="align-middle"><span className="pr-2" data-toggle="tooltip" data-placement="right" title="$ 0.05">0.56723</span></td>
-                            <td>
-                              <span className="d-block">9.34546</span>
-                              <span>6.7%</span>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td className="align-middle"><img className="crypt-star pr-1" alt="star" src={imgStar} width="15" /> DOGE/BTC</td>
-                            <td className="align-middle"><span className="pr-2" data-toggle="tooltip" data-placement="right" title="$ 0.05">0.56723</span></td>
-                            <td>
-                              <span className="d-block">9.34546</span>
-                              <span>6.7%</span>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td className="align-middle"><img className="crypt-star pr-1" alt="star" src={imgStar} width="15" /> PQR/STU</td>
-                            <td className="align-middle"><span className="pr-2" data-toggle="tooltip" data-placement="right" title="$ 0.05">0.56723</span></td>
-                            <td>
-                              <span className="d-block">9.34546</span>
-                              <span>6.7%</span>
-                            </td>
-                          </tr>
+                          {tradeJSON.map(data=>(
+                            <tr>
+                              <td className="align-middle"><img className="crypt-star pr-1" alt="star" src={imgStar} width="15" />{data.Coin}</td>
+                              <td className={`${data.class2?data.class2:''} align-middle`}><span className="pr-2" data-toggle="tooltip" data-placement="right" title="$ 0.05">{data.Price}</span></td>
+                              <td>
+                                <span className="d-block">{data.Volume}</span>
+                                <b className={data.class2?data.class2:''}>{data.Volum2}</b>
+                              </td>
+                            </tr>
+                          ))}
                         </tbody>
                       </table>
                     </div>
@@ -482,111 +165,13 @@ class TradePage extends Component {
                           </tr>
                         </thead>
                         <tbody>
-                          <tr>
-                            <td>22:35:59</td>
-                            <td className="crypt-down">0.000056</td>
-                            <td>5.3424984</td>
-                          </tr>
-                          <tr>
-                            <td>22:35:59</td>
-                            <td>0.0000564</td>
-                            <td>6.6768876</td>
-                          </tr>
-                          <tr>
-                            <td>22:35:59</td>
-                            <td>0.0000234</td>
-                            <td>4.3456600</td>
-                          </tr>
-                          <tr>
-                            <td>22:35:59</td>
-                            <td className="crypt-up">0.0000234</td>
-                            <td>4.3456600</td>
-                          </tr>
-                          <tr>
-                            <td>22:35:59</td>
-                            <td>0.0000567</td>
-                            <td>4.3456600</td>
-                          </tr>
-                          <tr>
-                            <td>22:35:59</td>
-                            <td className="crypt-up">0.0000234</td>
-                            <td>4.3456600</td>
-                          </tr>
-                          <tr>
-                            <td>22:35:59</td>
-                            <td>0.0000567</td>
-                            <td>4.3456600</td>
-                          </tr>
-                          <tr>
-                            <td>22:35:59</td>
-                            <td>0.0000564</td>
-                            <td>6.6768876</td>
-                          </tr>
-                          <tr>
-                            <td>22:35:59</td>
-                            <td>0.0000234</td>
-                            <td>4.3456600</td>
-                          </tr>
-                          <tr>
-                            <td>22:35:59</td>
-                            <td className="crypt-up">0.0000234</td>
-                            <td>4.3456600</td>
-                          </tr>
-                          <tr>
-                            <td>22:35:59</td>
-                            <td>0.0000567</td>
-                            <td>4.3456600</td>
-                          </tr>
-                          <tr>
-                            <td>22:35:59</td>
-                            <td className="crypt-up">0.0000234</td>
-                            <td>4.3456600</td>
-                          </tr>
-                          <tr>
-                            <td>22:35:59</td>
-                            <td>0.0000567</td>
-                            <td>4.3456600</td>
-                          </tr>
-                          <tr>
-                            <td>22:35:59</td>
-                            <td>0.0000564</td>
-                            <td>6.6768876</td>
-                          </tr>
-                          <tr>
-                            <td>22:35:59</td>
-                            <td>0.0000234</td>
-                            <td>4.3456600</td>
-                          </tr>
-                          <tr>
-                            <td>22:35:59</td>
-                            <td className="crypt-up">0.0000234</td>
-                            <td>4.3456600</td>
-                          </tr>
-                          <tr>
-                            <td>22:35:59</td>
-                            <td>0.0000567</td>
-                            <td>4.3456600</td>
-                          </tr>
-                          <tr>
-                            <td>22:35:59</td>
-                            <td className="crypt-up">0.0000234</td>
-                            <td>4.3456600</td>
-                          </tr>
-                          <tr>
-                            <td>22:35:59</td>
-                            <td>0.0000567</td>
-                            <td>4.3456600</td>
-                          </tr>
-                          <tr>
-                            <td>22:35:59</td>
-                            <td>0.0000564</td>
-                            <td>6.6768876</td>
-                          </tr>
-                          <tr>
-                            <td>22:35:59</td>
-                            <td>0.0000234</td>
-                            <td>4.3456600</td>
-                          </tr>
+                          {Transition.map(data=>(
+                            <tr>
+                              <td>{data.Time}</td>
+                              <td className={data.class2?data.class2:''}>{data.Price}</td>
+                              <td>{data.Volume}</td>
+                            </tr>
+                          ))}
                         </tbody>
                       </table>
                     </div>
@@ -600,106 +185,13 @@ class TradePage extends Component {
                           </tr>
                         </thead>
                         <tbody>
-                          <tr>
-                            <td>22:35:59</td>
-                            <td>0.0000564</td>
-                            <td>6.6768876</td>
-                          </tr>
-                          <tr>
-                            <td>22:35:59</td>
-                            <td className="crypt-down">0.000056</td>
-                            <td>5.3424984</td>
-                          </tr>
-                          <tr>
-                            <td>22:35:59</td>
-                            <td className="crypt-up">0.0000234</td>
-                            <td>4.3456600</td>
-                          </tr>
-                          <tr>
-                            <td>22:35:59</td>
-                            <td>0.0000234</td>
-                            <td>4.3456600</td>
-                          </tr>
-                          <tr>
-                            <td>22:35:59</td>
-                            <td>0.0000567</td>
-                            <td>4.3456600</td>
-                          </tr>
-                          <tr>
-                            <td>22:35:59</td>
-                            <td className="crypt-up">0.0000234</td>
-                            <td>4.3456600</td>
-                          </tr>
-                          <tr>
-                            <td>22:35:59</td>
-                            <td>0.0000567</td>
-                            <td>4.3456600</td>
-                          </tr>
-                          <tr>
-                            <td>22:35:59</td>
-                            <td>0.0000564</td>
-                            <td>6.6768876</td>
-                          </tr>
-                          <tr>
-                            <td>22:35:59</td>
-                            <td className="crypt-down">0.000056</td>
-                            <td>5.3424984</td>
-                          </tr>
-                          <tr>
-                            <td>22:35:59</td>
-                            <td className="crypt-up">0.0000234</td>
-                            <td>4.3456600</td>
-                          </tr>
-                          <tr>
-                            <td>22:35:59</td>
-                            <td>0.0000234</td>
-                            <td>4.3456600</td>
-                          </tr>
-                          <tr>
-                            <td>22:35:59</td>
-                            <td>0.0000567</td>
-                            <td>4.3456600</td>
-                          </tr>
-                          <tr>
-                            <td>22:35:59</td>
-                            <td className="crypt-up">0.0000234</td>
-                            <td>4.3456600</td>
-                          </tr>
-                          <tr>
-                            <td>22:35:59</td>
-                            <td>0.0000567</td>
-                            <td>4.3456600</td>
-                          </tr>
-                          <tr>
-                            <td>22:35:59</td>
-                            <td>0.0000564</td>
-                            <td>6.6768876</td>
-                          </tr>
-                          <tr>
-                            <td>22:35:59</td>
-                            <td className="crypt-down">0.000056</td>
-                            <td>5.3424984</td>
-                          </tr>
-                          <tr>
-                            <td>22:35:59</td>
-                            <td className="crypt-up">0.0000234</td>
-                            <td>4.3456600</td>
-                          </tr>
-                          <tr>
-                            <td>22:35:59</td>
-                            <td>0.0000234</td>
-                            <td>4.3456600</td>
-                          </tr>
-                          <tr>
-                            <td>22:35:59</td>
-                            <td>0.0000567</td>
-                            <td>4.3456600</td>
-                          </tr>
-                          <tr>
-                            <td>22:35:59</td>
-                            <td className="crypt-up">0.0000234</td>
-                            <td>4.3456600</td>
-                          </tr>
+                          {Transition.map(data=>(
+                            <tr>
+                              <td>{data.Time}</td>
+                              <td className={data.class2?data.class2:''}>{data.Price}</td>
+                              <td>{data.Volume}</td>
+                            </tr>
+                          ))}
                         </tbody>
                       </table>
                     </div>
@@ -770,70 +262,16 @@ class TradePage extends Component {
                               <td className="crypt-up">0.0003456</td>
                               <td>5.3424984</td>
                             </tr>
-                            <tr>
-                              <th>22:35:59</th>
-                              <td className="crypt-down">Sell</td>
-                              <td className="crypt-down">0.000056</td>
-                              <td className="crypt-down">0.000056</td>
-                              <td className="crypt-down">0.0003456</td>
-                              <td>5.3424984</td>
-                            </tr>
-                            <tr>
-                              <th>22:35:59</th>
-                              <td className="crypt-up">Buy</td>
-                              <td className="crypt-up">0.000056</td>
-                              <td className="crypt-up">0.000056</td>
-                              <td className="crypt-up">0.0003456</td>
-                              <td>5.3424984</td>
-                            </tr>
-                            <tr>
-                              <th>22:35:59</th>
-                              <td className="crypt-down">Sell</td>
-                              <td className="crypt-down">0.000056</td>
-                              <td className="crypt-down">0.000056</td>
-                              <td className="crypt-down">0.0003456</td>
-                              <td>5.3424984</td>
-                            </tr>
-                            <tr>
-                              <th>22:35:59</th>
-                              <td className="crypt-up">Buy</td>
-                              <td className="crypt-up">0.000056</td>
-                              <td className="crypt-up">0.000056</td>
-                              <td className="crypt-up">0.0003456</td>
-                              <td>5.3424984</td>
-                            </tr>
-                            <tr>
-                              <th>22:35:59</th>
-                              <td className="crypt-down">Sell</td>
-                              <td className="crypt-down">0.000056</td>
-                              <td className="crypt-down">0.000056</td>
-                              <td className="crypt-down">0.0003456</td>
-                              <td>5.3424984</td>
-                            </tr>
-                            <tr>
-                              <th>22:35:59</th>
-                              <td className="crypt-up">Buy</td>
-                              <td className="crypt-up">0.000056</td>
-                              <td className="crypt-up">0.000056</td>
-                              <td className="crypt-up">0.0003456</td>
-                              <td>5.3424984</td>
-                            </tr>
-                            <tr>
-                              <th>22:35:59</th>
-                              <td className="crypt-down">Sell</td>
-                              <td className="crypt-down">0.000056</td>
-                              <td className="crypt-down">0.000056</td>
-                              <td className="crypt-down">0.0003456</td>
-                              <td>5.3424984</td>
-                            </tr>
-                            <tr>
-                              <th>22:35:59</th>
-                              <td className="crypt-up">Buy</td>
-                              <td className="crypt-up">0.000056</td>
-                              <td className="crypt-up">0.000056</td>
-                              <td className="crypt-up">0.0003456</td>
-                              <td>5.3424984</td>
-                            </tr>
+                            {Buy_Sells.map(data=>(
+                              <tr>
+                                <th>{data.Time}</th>
+                                <td className="crypt-up">{data.Buy_Sells}</td>
+                                <td className="crypt-up">{data.PriceBTC}</td>
+                                <td className="crypt-up">{data.AmountBPS}</td>
+                                <td className="crypt-up">{data.DealtBPS}</td>
+                                <td>{data.Operation}</td>
+                              </tr>
+                            ))}
                           </tbody>
                         </table>
                       </div>
